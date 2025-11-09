@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kost Finder - Temukan Kost Nyaman di Kotamu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ================= HEADER / HERO SECTION ================= -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Temukan Kost Nyaman di Depok, Bogor, & Palembang</h1>
+      <p>Bersama <strong>Kost Finder</strong>, cari kost jadi lebih mudah, cepat, dan sesuai kebutuhanmu.</p>
+      <a href="#form" class="cta-btn">Mulai Cari Kost</a>
+    </div>
+    <img src="img/gambar_kost2.png" alt="Ilustrasi Kost Finder" class="hero-image">
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+    <!-- ======== FITUR UTAMA ======== -->
+    <section class="features">
+      <h2>Kenapa Memilih Kost Finder?</h2>
+      <ul>
+        <li><strong>Pencarian Cepat:</strong> Temukan kost berdasarkan kota dan harga.</li>
+        <li><strong>Terpercaya:</strong> Semua kost sudah diverifikasi pemiliknya.</li>
+        <li><strong>Efisien:</strong> Bisa langsung hubungi pemilik tanpa perantara.</li>
+      </ul>
+    </section>
+
+    <!-- ======== TESTIMONI PENGGUNA ======== -->
+    <section class="testimoni">
+      <h2>Apa Kata Pengguna Kami?</h2>
+      <div class="testi-grid">
+        <blockquote>
+          <p>“Dulu susah cari kost di Depok, sekarang tinggal klik langsung ketemu!”</p>
+          <cite>- Dina, Mahasiswa UI</cite>
+        </blockquote>
+        <blockquote>
+          <p>“Praktis banget, nggak ribet dan langsung bisa hubungi pemilik.”</p>
+          <cite>- Fajar, Pekerja di Bogor</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ======== FORM CTA (LEAD GENERATION) ======== -->
+    <section id="form" class="form-section">
+      <h2>Yuk, Temukan Kost Impianmu Sekarang!</h2>
+      <form action="#" method="post">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkapmu" required>
+
+        <label for="lokasi">Pilih Kota</label>
+        <select id="lokasi" name="lokasi" required>
+          <option value="">-- Pilih Kota --</option>
+          <option value="depok">Depok</option>
+          <option value="bogor">Bogor</option>
+          <option value="palembang">Palembang</option>
+        </select>
+
+        <label for="email">Alamat Email</label>
+        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+
+        <button type="submit">Kirim Permintaan</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2025 Kost Finder. Semua Hak Dilindungi.</p>
+    <div class="footer-links">
+      <a href="#">Kebijakan Privasi</a> | 
+      <a href="#">Syarat & Ketentuan</a>
+    </div>
+  </footer>
+</body>
+</html>
