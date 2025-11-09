@@ -1,80 +1,134 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kost Finder - Temukan Kost Nyaman di Kotamu</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body>
-  <!-- ================= HEADER / HERO SECTION ================= -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Temukan Kost Nyaman di Depok, Bogor, & Palembang</h1>
-      <p>Bersama <strong>Kost Finder</strong>, cari kost jadi lebih mudah, cepat, dan sesuai kebutuhanmu.</p>
-      <a href="#form" class="cta-btn">Mulai Cari Kost</a>
+<body class="bg-gray-50 text-gray-800 font-[Poppins]">
+
+  <!-- =============== NAVBAR =============== -->
+  <nav class="bg-[#1D5E1E] text-white py-4 shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <!-- 🔹 LOGO DI POJOK KIRI -->
+      <div class="flex items-center space-x-2">
+        <img src="KOS FINDER.png" alt="Logo Kost Finder" class="w-10 h-10 md:w-12 md:h-12 rounded-full shadow">
+        <h1 class="text-xl md:text-2xl font-bold">KostFinder</h1>
+      </div>
+
+      <!-- 🔹 MENU NAVIGASI -->
+      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+        <li><a href="#hero" class="hover:text-green-200">Beranda</a></li>
+        <li><a href="#about" class="hover:text-green-200">Tentang</a></li>
+        <li><a href="#features" class="hover:text-green-200">Fitur</a></li>
+        <li><a href="#testimoni" class="hover:text-green-200">Testimoni</a></li>
+        <li><a href="#form" class="hover:text-green-200">Cari Kost</a></li>
+      </ul>
+
+      <!-- 🔹 TOMBOL UNTUK MOBILE -->
+      <a href="#form" class="md:hidden bg-white text-[#1D5E1E] px-4 py-2 rounded-md font-semibold hover:bg-green-100 transition">Mulai</a>
     </div>
-    <img src="gambar_kost2.png" alt="Ilustrasi Kost Finder" class="hero-image">
+  </nav>
+
+  <!-- =============== HERO SECTION =============== -->
+  <header id="hero" class="pt-24 pb-16 bg-gradient-to-r from-[#1D5E1E] to-[#2F8F2F] text-white">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+      <div class="max-w-xl text-center md:text-left space-y-5">
+        <h1 class="text-3xl md:text-4xl font-bold leading-tight">Temukan Kost Nyaman di Depok, Bogor, & Palembang</h1>
+        <p class="text-lg">Bersama <strong>Kost Finder</strong>, cari kost jadi lebih mudah, cepat, dan sesuai kebutuhanmu.</p>
+        <a href="#form" class="inline-block bg-white text-[#1D5E1E] font-semibold px-6 py-3 rounded-lg shadow hover:bg-[#2F8F2F] hover:text-white transition">Mulai Cari Kost</a>
+      </div>
+      <img src="img/gambar_kost3.png" alt="Ilustrasi Kost Finder" class="w-72 mt-8 md:mt-0 rounded-xl shadow-lg">
+    </div>
   </header>
 
-  <!-- ================= MAIN CONTENT ================= -->
-  <main>
-    <!-- ======== FITUR UTAMA ======== -->
-    <section class="features">
-      <h2>Kenapa Memilih Kost Finder?</h2>
-      <ul>
-        <li><strong>Pencarian Cepat:</strong> Temukan kost berdasarkan kota dan harga.</li>
-        <li><strong>Terpercaya:</strong> Semua kost sudah diverifikasi pemiliknya.</li>
-        <li><strong>Efisien:</strong> Bisa langsung hubungi pemilik tanpa perantara.</li>
-      </ul>
-    </section>
+  <!-- =============== ABOUT SECTION =============== -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-6 text-center md:text-left">
+      <h2 class="text-3xl font-bold text-[#1D5E1E] mb-6 text-center">Tentang Kost Finder</h2>
+      <p class="max-w-3xl mx-auto text-gray-700 leading-relaxed">
+        Kost Finder adalah platform web yang membantu kamu menemukan kost terbaik di wilayah <strong>Depok, Bogor, dan Palembang</strong>.
+        Dibangun dengan semangat membantu mahasiswa dan pekerja, aplikasi ini mempermudah proses pencarian dengan fitur pencarian cepat, verifikasi pemilik, dan kontak langsung tanpa perantara.
+      </p>
+    </div>
+  </section>
 
-    <!-- ======== TESTIMONI PENGGUNA ======== -->
-    <section class="testimoni">
-      <h2>Apa Kata Pengguna Kami?</h2>
-      <div class="testi-grid">
-        <blockquote>
-          <p>“Dulu susah cari kost di Depok, sekarang tinggal klik langsung ketemu!”</p>
-          <cite>- Dina, Mahasiswa UI</cite>
-        </blockquote>
-        <blockquote>
-          <p>“Praktis banget, nggak ribet dan langsung bisa hubungi pemilik.”</p>
-          <cite>- Fajar, Pekerja di Bogor</cite>
-        </blockquote>
+  <!-- =============== FITUR SECTION =============== -->
+  <section id="features" class="py-16 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold text-[#1D5E1E] mb-8">Kenapa Memilih Kost Finder?</h2>
+    <div class="max-w-3xl mx-auto space-y-4 text-left">
+      <div class="bg-white p-5 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-lg text-[#1D5E1E]">🔍 Pencarian Cepat</h3>
+        <p>Temukan kost berdasarkan kota dan harga dengan hasil yang akurat.</p>
       </div>
-    </section>
+      <div class="bg-white p-5 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-lg text-[#1D5E1E]">✅ Terpercaya</h3>
+        <p>Semua kost sudah diverifikasi agar kamu tidak perlu khawatir.</p>
+      </div>
+      <div class="bg-white p-5 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-lg text-[#1D5E1E]">💬 Efisien</h3>
+        <p>Hubungi pemilik kost langsung tanpa perantara, lebih cepat dan transparan.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- ======== FORM CTA (LEAD GENERATION) ======== -->
-    <section id="form" class="form-section">
-      <h2>Yuk, Temukan Kost Impianmu Sekarang!</h2>
-      <form action="#" method="post">
-        <label for="nama">Nama Lengkap</label>
-        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkapmu" required>
+  <!-- =============== TESTIMONI SECTION =============== -->
+  <section id="testimoni" class="py-16 bg-green-50 text-center">
+    <h2 class="text-3xl font-bold text-[#1D5E1E] mb-8">Apa Kata Pengguna Kami?</h2>
+    <div class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto px-4">
+      <blockquote class="bg-white p-6 rounded-lg shadow border-l-4 border-[#1D5E1E] italic">
+        “Dulu susah cari kost di Depok, sekarang tinggal klik langsung ketemu!”
+        <cite class="block mt-3 font-semibold not-italic text-[#1D5E1E]">- Dina, Mahasiswa UI</cite>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-lg shadow border-l-4 border-[#1D5E1E] italic">
+        “Praktis banget, nggak ribet dan langsung bisa hubungi pemilik.”
+        <cite class="block mt-3 font-semibold not-italic text-[#1D5E1E]">- Fajar, Pekerja di Bogor</cite>
+      </blockquote>
+    </div>
+  </section>
 
-        <label for="lokasi">Pilih Kota</label>
-        <select id="lokasi" name="lokasi" required>
+  <!-- =============== FORM SECTION =============== -->
+  <section id="form" class="py-16 bg-[#1D5E1E] text-white text-center">
+    <h2 class="text-3xl font-bold mb-6">Yuk, Temukan Kost Impianmu Sekarang!</h2>
+    <form action="#" method="post" class="max-w-md mx-auto space-y-4 bg-white text-gray-700 p-6 rounded-xl shadow">
+      <div>
+        <label for="nama" class="block font-semibold mb-1">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkapmu" required class="w-full p-2 border rounded-md focus:ring-2 focus:ring-green-400 outline-none">
+      </div>
+      <div>
+        <label for="lokasi" class="block font-semibold mb-1">Pilih Kota</label>
+        <select id="lokasi" name="lokasi" required class="w-full p-2 border rounded-md focus:ring-2 focus:ring-green-400 outline-none">
           <option value="">-- Pilih Kota --</option>
           <option value="depok">Depok</option>
           <option value="bogor">Bogor</option>
           <option value="palembang">Palembang</option>
         </select>
+      </div>
+      <div>
+        <label for="email" class="block font-semibold mb-1">Alamat Email</label>
+        <input type="email" id="email" name="email" placeholder="contoh@email.com" required class="w-full p-2 border rounded-md focus:ring-2 focus:ring-green-400 outline-none">
+      </div>
+      <button type="submit" class="w-full bg-[#1D5E1E] text-white font-semibold py-2 rounded-md hover:bg-green-700 transition">Kirim Permintaan</button>
+    </form>
+  </section>
 
-        <label for="email">Alamat Email</label>
-        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
-
-        <button type="submit">Kirim Permintaan</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    <p>© 2025 Kost Finder. Semua Hak Dilindungi.</p>
-    <div class="footer-links">
-      <a href="#">Kebijakan Privasi</a> | 
-      <a href="#">Syarat & Ketentuan</a>
+  <!-- =============== FOOTER =============== -->
+  <footer class="bg-[#143b14] text-white py-8 text-center text-sm">
+    <div class="flex flex-col items-center space-y-3">
+      <p class="mt-2">© 2025 Kost Finder. Semua Hak Dilindungi.</p>
+      <div class="mt-1 space-x-3">
+        <a href="#" class="text-green-200 hover:underline">Kebijakan Privasi</a>
+        <span>|</span>
+        <a href="#" class="text-green-200 hover:underline">Syarat & Ketentuan</a>
+      </div>
     </div>
   </footer>
-</body>
 
+</body>
 </html>
